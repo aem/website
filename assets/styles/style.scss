@@ -1,0 +1,126 @@
+/* ===== */
+/* FONTS */
+/* ===== */
+* {
+  font-family: "Oxygen", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02rem;
+  font-size: 0.95rem;
+}
+
+pre, code {
+  font-family: "Inconsolata", Monaco, monospace;
+  letter-spacing: 0;
+}
+
+/* ====== */
+/* LAYOUT */
+/* ====== */
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ============= */
+/* HEADER STYLES */
+/* ============= */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+  margin-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+h6 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ============= */
+/* INLINE STYLES */
+/* ============= */
+p {
+  line-height: 1.6
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+code {
+  margin: 0 0.1rem;
+  padding: 0 0.2rem;
+  background-color: rgba(128, 131, 219, 0.42)
+}
+
+/* =========== */
+/* LIST STYLES */
+/* =========== */
+ul :first-child, ol :first-child {
+  margin-top: 1.5rem;
+}
+
+ul :last-child, ol :last-child {
+  margin-bottom: 1.5rem;
+}
+
+ul > ul :first-child, ol > ol :first-child {
+  margin-top: 0.75rem;
+}
+
+ul > ul :last-child, ol > ol :last-child {
+  margin-bottom: 0.75rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============ */
+/* BLOCK STYLES */
+/* ============ */
+blockquote {
+  padding: 1rem 0.5rem;
+  color: #777777;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+pre {
+  background-color: rgba(128, 131, 219, 0.42);
+  padding: 0.75rem 0.5rem;
+  margin: 0.5rem;
+  max-width: 750px;
+  overflow-x: scroll;
+}
