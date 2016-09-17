@@ -6,10 +6,12 @@ import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 
 export default () => {
-	return (
-		<Route path="/" component={Layout}>
-			<IndexRoute component={Home}/>
-			<Route path="*" component={NotFound}/>
-		</Route>
-	);
+  const render = () => {
+    return (
+      <Route path="/" component={Layout}>
+        <IndexRoute component={Home}/>
+        <Route path="*" component={NotFound}/>
+      </Route>
+    );
+  };
 }
