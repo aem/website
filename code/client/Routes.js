@@ -6,12 +6,10 @@ import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 
 export default () => {
-  const render = () => {
-    return (
-      <Route path="/" component={Layout}>
-        <IndexRoute component={Home}/>
-        <Route path="*" component={NotFound}/>
-      </Route>
-    );
-  };
+  return (
+    <Route path="/" component={Layout}>
+      <IndexRoute component={Home}/>
+      <Route path="*" component={NotFound} status={404} />
+    </Route>
+  );
 }
