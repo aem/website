@@ -1,3 +1,3 @@
-require('../common/server entry')
+require('../common/server entry');
 
-require('./start')
+require('./start');

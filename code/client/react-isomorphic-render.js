@@ -1,8 +1,7 @@
-import routes  from './routes'
-import wrapper from './wrapper'
+import routes from './Routes';
+import wrapper from './Wrapper';
 
-export default
-{
+export default {
   // Redux reducer
   // (either an object or a function returning an object)
   reducer: () => require('./reducer'),
@@ -14,8 +13,7 @@ export default
   // Wraps React page component with arbitrary elements (e.g. <Provider/>, etc; see an example below)
   wrapper,
 
-  on_store_created({ reload_reducer })
-  {
+  on_store_created({ reload_reducer }) {
     // (for Webpack users only)
     //
     // client side hot module reload for Redux reducers
