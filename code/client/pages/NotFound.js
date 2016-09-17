@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { title }            from 'react-isomorphic-render'
-import styler               from 'react-styling'
+import { title } from 'react-isomorphic-render'
+import styler from 'react-styling'
 
 export default class NotFound extends Component {
 	render() {

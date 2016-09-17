@@ -1,14 +1,13 @@
 import React, { Component, PropTypes } from 'react';
-import styler from 'react-styling';
 import { title } from 'react-isomorphic-render';
 
 export default class Page extends Component {
-	render() {
-		return (
-			<section className="content">
-				{title("Home")}
-				<h1>Homepage Component</h1>
-			</section>
-		);
-	}
+  render() {
+    return (
+      <section>
+        {title("Home | Adam Markon")}
+        <h2>Work in progress...</h2>
+      </section>
+    );
+  }
 }

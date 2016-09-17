@@ -1,3 +1,5 @@
+@import "constants.scss";
+
 /* ===== */
 /* FONTS */
 /* ===== */
@@ -5,19 +7,46 @@
   font-family: "Oxygen", Arial, Helvetica, sans-serif;
   letter-spacing: 0.02rem;
   font-size: 0.95rem;
+  color: $text-black;
 }
 
 pre, code {
   font-family: "Inconsolata", Monaco, monospace;
   letter-spacing: 0;
+  color: $text-black;
 }
 
 /* ====== */
 /* LAYOUT */
 /* ====== */
 body {
-  max-width: 1280px;
+  max-width: 1060px;
   margin: 0 auto;
+}
+
+.content {
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+
+  h6 {
+    margin-bottom: 0.4rem;
+    margin-left: 0.5rem;
+    align-self: flex-end;
+    color: $text-black;
+  }
+}
+
+.body {
+  margin: 1rem auto;
+}
+
+footer {
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 /* ============= */
@@ -27,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 0;
   padding: 0;
+  color: $text-primary;
 }
 
 h1 {
@@ -34,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.85rem;
+  font-size: 1.8rem;
   margin-bottom: 0.3rem;
 }
 
