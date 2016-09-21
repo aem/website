@@ -39,8 +39,7 @@ export default function(parameters) {
     // Http host and port for executing all client-side ajax requests on server-side
     application: {
       host: configuration.web_server.http.host,
-      port: 443,
-      secure: true
+      port: configuration.web_server.http.port
     },
 
     html: {
@@ -60,7 +59,7 @@ export default function(parameters) {
   common);
 
   // Start webpage rendering server
-  server.listen(443, function(error) {
+  server.listen(configuration.webpage_server.http.port, function(error) {
     if (error) {
       log.error('Webpage rendering server shutdown due to an error', error);
       throw error;
