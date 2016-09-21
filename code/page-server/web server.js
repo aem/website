@@ -51,7 +51,10 @@ export default function(parameters) {
           // `devtools` just tampers with CSS styles a bit.
           // It's not required for operation and can be omitted.
           const script = devtools({ ...parameters, entry: 'main' });
-          return <script dangerouslySetInnerHTML={{ __html: script }}/>;
+          return [
+            <script key={1} dangerouslySetInnerHTML={{ __html: script }}/>,
+            <link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" />
+          ];
         }
       }
     }

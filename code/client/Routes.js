@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
-import Layout from './pages/Layout'
-import NotFound from './pages/NotFound'
-import Home from './pages/Home'
+import Layout from './containers/Layout'
+import NotFound from './containers/NotFound'
+import Home from './containers/Home'
 
 export default () => {
   return (

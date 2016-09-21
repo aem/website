@@ -1,3 +1,4 @@
+
 @import "constants.scss";
 
 /* ===== */
@@ -11,9 +12,10 @@
 }
 
 pre, code {
-  font-family: "Inconsolata", Monaco, monospace;
+  font-family: "Oxygen Mono", Monaco, monospace;
   letter-spacing: 0;
   color: $text-black;
+  font-size: 0.85rem;
 }
 
 /* ====== */
@@ -149,8 +151,11 @@ blockquote {
 
 pre {
   background-color: rgba(128, 131, 219, 0.42);
-  padding: 0.75rem 0.5rem;
-  margin: 0.5rem;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem auto;
   max-width: 750px;
+  max-height: 10rem;
   overflow-x: scroll;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.3);
 }

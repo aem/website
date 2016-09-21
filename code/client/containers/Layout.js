@@ -1,13 +1,9 @@
 import { head } from 'react-isomorphic-render';
 import React, { Component, PropTypes } from 'react';
 
-export default class Layout extends Component {
-  static propTypes: {
-    children : PropTypes.object.isRequired
-  };
-
+class Layout extends Component {
 	render() {
-    const title = 'Home | Adam Markon';
+    const title = 'Adam Markon';
 
     const meta = [
       { charset: 'utf-8' },
@@ -30,10 +26,16 @@ export default class Layout extends Component {
         <footer>
           © Adam Markon 2016
           <span style={{visibility: 'hidden'}}>
-            Aha! You've found it. Screenshot this and find a way to send it to me, I'll give you a present or a high five or something.
+            Maybe I can convince website crawlers that my website is all about giraffes. Giraffe giraffe giraffe.
           </span>
         </footer>
       </div>
     );
   };
 }
+
+Layout.propTypes = {
+  children : PropTypes.object.isRequired
+};
+
+export default Layout;
