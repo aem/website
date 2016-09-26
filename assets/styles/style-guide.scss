@@ -1,4 +1,3 @@
-
 @import "constants.scss";
 
 /* ===== */
@@ -16,39 +15,6 @@ pre, code {
   letter-spacing: 0;
   color: $text-black;
   font-size: 0.85rem;
-}
-
-/* ====== */
-/* LAYOUT */
-/* ====== */
-body {
-  max-width: 1060px;
-  margin: 0 auto;
-}
-
-.content {
-  padding: 1rem;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-
-  h6 {
-    margin-bottom: 0.4rem;
-    margin-left: 0.5rem;
-    align-self: flex-end;
-    color: $text-black;
-  }
-}
-
-.body {
-  margin: 1rem auto;
-}
-
-footer {
-  font-size: 0.8rem;
-  font-style: italic;
 }
 
 /* ============= */
@@ -118,19 +84,19 @@ code {
 /* =========== */
 /* LIST STYLES */
 /* =========== */
-ul :first-child, ol :first-child {
+ul li:first-child, ol li:first-child {
   margin-top: 1.5rem;
 }
 
-ul :last-child, ol :last-child {
+ul li:last-child, ol li:last-child {
   margin-bottom: 1.5rem;
 }
 
-ul > ul :first-child, ol > ol :first-child {
+ul > ul li:first-child, ol > ol li:first-child {
   margin-top: 0.75rem;
 }
 
-ul > ul :last-child, ol > ol :last-child {
+ul > ul li:last-child, ol > ol li:last-child {
   margin-bottom: 0.75rem;
 }
 

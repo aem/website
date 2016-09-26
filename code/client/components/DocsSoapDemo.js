@@ -5,17 +5,16 @@ import React, { Component } from 'react';
 class DocsSoapDemo extends Component {
   constructor() {
     super();
-    this.onPaste = this.onPaste.bind(this);
     this.state = {
       docsHtml: ""
     };
   }
 
-  onPaste(event) {
+  onPaste = (event) => {
     this.setState({docsHtml: event.clipboardData.getData("text/html").slice(22)});
-  }
+  };
 
-  render() {
+  render = () => {
     return (
       <div className="demo">
         <textarea
@@ -38,7 +37,7 @@ class DocsSoapDemo extends Component {
         }
       </div>
     )
-  }
+  };
 }
 
 export default DocsSoapDemo;

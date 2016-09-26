@@ -1,0 +1,77 @@
+@import "constants.scss";
+@import "bootstrap-custom.scss";
+
+header h6 {
+  color: $text-black;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav ul {
+  margin-top: 1.5rem;
+
+  li {
+    width: 8rem;
+    text-align: center;
+    margin: 0;
+
+    &:hover {
+      background-color: $gray-lightest;
+
+      > a {
+        color: $text-primary;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.collapsing ul, [aria-expanded="true"] ul {
+  margin-top: 0;
+
+  li {
+    width: 18rem;
+    border-bottom: $dotted-border-style;
+    padding: 1rem 0;
+    margin: 0 auto;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.body {
+  margin: 1rem auto;
+}
+
+footer {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+textarea {
+  @include make-md-column(8);
+  @include make-xs-column(10);
+  @include center-block();
+  float: none !important;
+  height: 4rem;
+}
+
+.demo {
+  @include make-row();
+}
+
+.html-output {
+  @include make-md-column(6);
+}
+
+.clean-output {
+  @include make-md-column(6);
+}
