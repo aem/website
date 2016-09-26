@@ -8,7 +8,6 @@ import { render } from 'react-isomorphic-render/redux';
 import common from './react-isomorphic-render';
 import 'bootstrap-without-jquery';
 
-require('../../assets/styles/bootstrap-custom.scss');
 require('../../assets/styles/style-guide.scss');
 require('../../assets/styles/website-style.scss');
 
