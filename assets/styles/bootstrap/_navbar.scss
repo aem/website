@@ -31,7 +31,7 @@
 .navbar-header {
   @include clearfix;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: 840px) {
     float: left;
   }
 }
@@ -60,7 +60,7 @@
     overflow-y: auto;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: 840px) {
     width: auto;
     border-top: 0;
     box-shadow: none;
@@ -195,7 +195,7 @@
   float: right;
   margin-right: $navbar-padding-horizontal;
   padding: 9px 10px;
-  @include navbar-vertical-align(34px);
+  margin-top: 0.5rem;
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
@@ -209,7 +209,6 @@
 
   // Bars
   .icon-bar {
-    background-color: $text-black;
     display: block;
     width: 22px;
     height: 2px;
@@ -219,7 +218,7 @@
     margin-top: 4px;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: 840px) {
     display: none;
   }
 }
@@ -237,7 +236,7 @@
 
   }
 
-  @media (max-width: $grid-float-breakpoint-max) {
+  @media (max-width: 840px) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -262,7 +261,7 @@
   }
 
   // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: 840px) {
     float: left;
     margin: 0;
 
@@ -374,7 +373,7 @@
 //
 // Declared after the navbar components to ensure more specificity on the margins.
 
-@media (min-width: $grid-float-breakpoint) {
+@media (min-width: 840px) {
   .navbar-left {
     float: left !important;
   }
@@ -442,10 +441,10 @@
     border-color: $navbar-default-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
+      background-color: $gray-lightest;
     }
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: $text-primary;
     }
   }
 
