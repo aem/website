@@ -1,8 +1,10 @@
+import { connect } from 'react-redux';
 import cx from 'classnames';
 import { head } from 'react-isomorphic-render';
 import { Link } from 'react-router';
 import React, { Component, PropTypes } from 'react';
 
+@connect(model => ({ location: model.router.location }))
 class Layout extends Component {
 	render() {
     const title = 'Adam Markon';
@@ -44,7 +46,7 @@ class Layout extends Component {
                   <li style={{marginTop: 0 /* override default list style */}}>
                     <Link
                       to="/"
-                      className={cx({active: typeof window !== 'undefined' && window.location.pathname === '/'})}
+                      className={cx({active: this.props.location.pathname === '/'})}
                     >
                       Home
                     </Link>
@@ -52,7 +54,7 @@ class Layout extends Component {
                   <li>
                     <Link
                       to="open-source"
-                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/open-source/)})}
+                      className={cx({active: this.props.location.pathname.match(/open-source/)})}
                     >
                       Open-source
                     </Link>
@@ -60,7 +62,7 @@ class Layout extends Component {
                   <li>
                     <Link
                       to="resume"
-                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/resume/)})}
+                      className={cx({active: this.props.location.pathname.match(/resume/)})}
                     >
                       Resume
                     </Link>
@@ -68,7 +70,7 @@ class Layout extends Component {
                   <li style={{marginBottom: 0 /* override default list style */}}>
                     <Link
                       to="contact"
-                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/contact/)})}
+                      className={cx({active: this.props.location.pathname.match(/contact/)})}
                     >
                       Contact Adam
                     </Link>
@@ -81,7 +83,7 @@ class Layout extends Component {
         <section className="body">
           {this.props.children}
         </section>
-        <footer>
+        <footer className="container-fluid">
           © Adam Markon 2016
           <span style={{visibility: 'hidden'}}>
             Maybe I can convince website crawlers that my website is all about giraffes. Giraffe giraffe giraffe.
@@ -93,7 +95,8 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children : PropTypes.object.isRequired
+  children : PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired
 };
 
 export default Layout;

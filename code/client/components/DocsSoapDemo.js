@@ -22,19 +22,38 @@ class DocsSoapDemo extends Component {
           placeholder="Paste Google Docs content here..."
         >
         </textarea>
-        {this.state.docsHtml &&
           <div className="output">
-            <pre className="html-output">
-              {Beautify.html(this.state.docsHtml, {
-                indent_char: ' ',
-                indent_size: 2,
-                indent_inner_html: true,
-                unformatted: []
-              })}
-            </pre>
-            <div className="clean-output" dangerouslySetInnerHTML={{__html: docsSoap(this.state.docsHtml)}}></div>
+            <div className="html-output">
+              <h6>Original HTML</h6>
+              <pre>
+                {Beautify.html(this.state.docsHtml, {
+                  indent_char: ' ',
+                  indent_size: 2,
+                  indent_inner_html: true,
+                  unformatted: []
+                })}
+              </pre>
+            </div>
+            <div className="clean-html">
+              <h6>Transformed HTML</h6>
+              <pre>
+                {this.state.docsHtml && Beautify.html(docsSoap(this.state.docsHtml), {
+                  indent_char: ' ',
+                  indent_size: 2,
+                  indent_inner_html: true,
+                  unformatted: []
+                })}
+              </pre>
+            </div>
+            <div className="clean-output-wrapper">
+              <h6>Resulting Rendered Output</h6>
+              <div
+                className="clean-output"
+                dangerouslySetInnerHTML={{__html: this.state.docsHtml && docsSoap(this.state.docsHtml)}}
+              >
+              </div>
+            </div>
           </div>
-        }
       </div>
     )
   };

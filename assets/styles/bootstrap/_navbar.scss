@@ -108,7 +108,7 @@
   > .navbar-header,
   > .navbar-collapse {
     margin-right: -$navbar-padding-horizontal;
-    margin-left:  -$navbar-padding-horizontal;
+    //margin-left:  -$navbar-padding-horizontal;
 
     @media (min-width: $grid-float-breakpoint) {
       margin-right: 0;
