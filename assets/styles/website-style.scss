@@ -59,7 +59,14 @@ textarea {
   @include make-xs-column(10);
   @include center-block();
   float: none !important;
-  height: 4rem;
+  height: 1.7rem;
+  border-radius: 5px;
+  border: dashed 2px $text-primary;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .demo {
@@ -102,4 +109,9 @@ textarea {
   span {
     font-style: italic;
   }
+}
+
+.badge {
+  position: relative;
+  top: 5px;
 }
