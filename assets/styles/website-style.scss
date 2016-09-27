@@ -5,10 +5,6 @@ html {
   padding: 1rem 0;
 }
 
-header h6 {
-  color: $text-black;
-}
-
 body {
   max-width: 1060px;
   margin: 0 auto;
@@ -22,12 +18,9 @@ nav ul {
     text-align: center;
     margin: 0;
 
-    &:hover {
+    &:hover > a, .active {
+      color: $text-primary;
       background-color: $gray-lightest;
-
-      > a {
-        color: $text-primary;
-      }
     }
 
     a {

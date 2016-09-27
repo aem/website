@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { head } from 'react-isomorphic-render';
 import { Link } from 'react-router';
 import React, { Component, PropTypes } from 'react';
@@ -40,10 +41,38 @@ class Layout extends Component {
               </div>
               <div className="collapse navbar-collapse" id="nav-links">
                 <ul className="nav navbar-nav navbar-right">
-                  <li style={{marginTop: 0 /* override default list style */}}><Link to="/">Home</Link></li>
-                  <li><Link to="open-source">Open-source</Link></li>
-                  <li><Link to="resume">Resume</Link></li>
-                  <li style={{marginBottom: 0 /* override default list style */}}><Link to="contact">Contact Adam</Link></li>
+                  <li style={{marginTop: 0 /* override default list style */}}>
+                    <Link
+                      to="/"
+                      className={cx({active: typeof window !== 'undefined' && window.location.pathname === '/'})}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="open-source"
+                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/open-source/)})}
+                    >
+                      Open-source
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="resume"
+                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/resume/)})}
+                    >
+                      Resume
+                    </Link>
+                  </li>
+                  <li style={{marginBottom: 0 /* override default list style */}}>
+                    <Link
+                      to="contact"
+                      className={cx({active: typeof window !== 'undefined' && window.location.pathname.match(/contact/)})}
+                    >
+                      Contact Adam
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
