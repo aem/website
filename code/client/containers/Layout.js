@@ -12,6 +12,7 @@ class Layout extends Component {
     const meta = [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no' },
+      { name: 'description', content: 'Adam Markon is a software developer specializing in front-end web development and React.'},
       { property: 'og:title', content: 'Adam Markon' },
       { property: 'og:description', content: `Adam Markon is a software developer specializing in front-end web development and React.` },
       { property: 'og:locale', content: 'es-US' }

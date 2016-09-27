@@ -26,11 +26,11 @@ export default function(parameters) {
       // Clear Webpack require() cache for hot reload in development mode
       // (this is not necessary)
       if (_development_) {
-        delete require.cache[require.resolve('../../assets/images/icon/cat_64x64.png')];
+        delete require.cache[require.resolve('../../assets/images/icon/am_64x64.png')];
       }
 
       // Add "favicon"
-      result.icon = require('../../assets/images/icon/cat_64x64.png');
+      result.icon = require('../../assets/images/icon/am_64x64.png');
 
       // Return assets
       return result;
