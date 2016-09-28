@@ -16,7 +16,7 @@ class DocsSoapDemo extends Component {
 
   render = () => {
     return (
-      <div className="demo">
+      <div className="demo" itemProp="exampleOfWork">
         <textarea
           onPaste={this.onPaste}
           placeholder="Paste Google Docs content here..."
