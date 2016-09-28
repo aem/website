@@ -3,7 +3,6 @@ import cx from 'classnames';
 import { head } from 'react-isomorphic-render';
 import { Link } from 'react-router';
 import React, { Component, PropTypes } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 @connect(model => ({ location: model.router.location }))
 class Layout extends Component {
