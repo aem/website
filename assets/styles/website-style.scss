@@ -115,3 +115,23 @@ textarea {
   position: relative;
   top: 5px;
 }
+
+.inline-block {
+  display: inline-block;
+}
+
+.right {
+  float: right;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  padding-top: 8px;
+  display: inline-block;
+}
+
+.profile-links img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-left: 10px;
+}

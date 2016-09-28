@@ -3,6 +3,7 @@ import cx from 'classnames';
 import { head } from 'react-isomorphic-render';
 import { Link } from 'react-router';
 import React, { Component, PropTypes } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 @connect(model => ({ location: model.router.location }))
 class Layout extends Component {
@@ -86,10 +87,18 @@ class Layout extends Component {
           {this.props.children}
         </section>
         <footer className="container-fluid">
-          © Adam Markon 2016
-          <span style={{visibility: 'hidden'}}>
-            Maybe I can convince website crawlers that my website is all about giraffes. Giraffe giraffe giraffe.
-          </span>
+          <span className="copyright">© Adam Markon 2016</span>
+          <div className="inline-block right profile-links">
+            <a href="https://github.com/aem" target="_blank">
+              <img src={require('../img/github.png')} alt="GitHub Logo" />
+            </a>
+            <a href="https://www.linkedin.com/in/adammarkon" target="_blank">
+              <img src={require('../img/linkedin.png')} alt="LinkedIn Logo" />
+            </a>
+            <a href="https://www.twitter.com/amarkon88" target="_blank">
+              <img src={require('../img/twitter.png')} alt="Twitter Logo" />
+            </a>
+          </div>
         </footer>
       </div>
     );
