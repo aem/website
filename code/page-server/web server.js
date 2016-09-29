@@ -53,7 +53,7 @@ export default function(parameters) {
           const script = devtools({ ...parameters, entry: 'main' });
           return [
             <script key={1} dangerouslySetInnerHTML={{ __html: script }}/>,
-            <link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" />
+            <link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" type="text/css" />
           ];
         }
       }
