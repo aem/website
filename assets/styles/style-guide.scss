@@ -4,14 +4,14 @@
 /* FONTS */
 /* ===== */
 * {
-  font-family: "Oxygen", Arial, Helvetica, sans-serif;
+  font-family: "Oxygen", Arial, Helvetica, sans-serif!important;
   letter-spacing: 0.02rem;
   font-size: 0.95rem;
   color: $text-black;
 }
 
 pre, code {
-  font-family: "Oxygen Mono", Monaco, monospace;
+  font-family: "Oxygen Mono", Monaco, monospace!important;
   letter-spacing: 0;
   color: $text-black;
   font-size: 0.85rem;
