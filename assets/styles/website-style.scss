@@ -130,8 +130,60 @@ textarea {
   display: inline-block;
 }
 
-.profile-links img {
-  max-width: 30px;
-  max-height: 30px;
-  margin-left: 10px;
+.profile-links {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      span {
+        display: inline;
+      }
+
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+  span {
+    margin-left: 20px;
+    position: relative;
+    bottom: 8px;
+    display: none;
+  }
+  img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 25px;
+  }
+}
+
+.resume {
+  width: 8.5in;
+  margin: 0 auto;
+
+  div, table, section {
+    width: 8.5in;
+  }
+
+  .section-header {
+    padding-bottom: 0.5rem;
+    td {
+      font-size: 0.8rem;
+    }
+    tr:first-child {
+      td {
+        font-size: 1rem;
+      }
+
+      > td:first-child {
+        font-weight: bold;
+      }
+    }
+    tr > td:first-child {
+      text-align: left;
+    }
+    tr > td:last-child {
+      text-align: right;
+    }
+  }
 }
