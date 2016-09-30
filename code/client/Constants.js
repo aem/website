@@ -11,7 +11,27 @@ const eaganEducation = new List([
   new Map({left: '', right: 'Eagan, MN'})
 ]);
 
+const docsSoapHeader = new List([
+  new Map({left: 'docs-soap', right: '2016'}),
+  new Map({left: 'npmjs.com/package/docs-soap', right: '~2,000 downloads'})
+]);
+
+const languagesData = new List([
+  new Map({left: 'JavaScript', right: '5'}),
+  new Map({left: 'ReactJS • BackboneJS • Handlebars • jQuery • NodeJS'}),
+  new Map({left: 'HTML', right: '5'}),
+  new Map({left: 'CSS', right: '4'}),
+  new Map({left: 'Java', right: '4'}),
+  new Map({left: 'Python', right: '3'}),
+  new Map({left: 'Ruby', right: '3'}),
+  new Map({left: 'SQL', right: '3'}),
+  new Map({left: 'Obective-C', right: '2'}),
+  new Map({left: 'C', right: '2'}),
+]);
+
 export default {
+  docsSoapHeader,
   eaganEducation,
+  languagesData,
   northeasternEducation
 };

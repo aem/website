@@ -1,0 +1,82 @@
+.resume {
+  width: 8.5in;
+  margin: 0 auto;
+
+  div, table, section {
+    width: 100%;
+  }
+
+  div.horizontal-divider {
+    height: 1px;
+    border-top: $dotted-border-style;
+    margin: 10px 0;
+  }
+
+  div.vertical-divider {
+    height: auto;
+    width: 1px;
+    border-left: $dotted-border-style;
+  }
+
+  .side-panel {
+    width: 320px;
+  }
+  .section-header {
+    &:not(&:last-child) {
+      padding-bottom: 0.5rem;
+    }
+    td {
+      font-size: 0.8rem;
+    }
+    tr:first-child {
+      td {
+        font-size: 1rem;
+      }
+
+      > td:first-child {
+        font-weight: bold;
+      }
+    }
+    tr > td:first-child {
+      text-align: left;
+    }
+    tr > td:last-child {
+      text-align: right;
+    }
+  }
+
+  .ranked-table {
+    &:not(&:last-child) {
+      padding-bottom: 0.5rem;
+    }
+    tr > td:first-child {
+      text-align: left;
+    }
+    tr > td:last-child {
+      text-align: right;
+      color: $text-primary;
+
+      &.single-column {
+        color: $text-black;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  h2 {
+    color: $text-primary;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 0 0 0 $table-border-inset;
+    margin-bottom: 8px;
+  }
+
+  p {
+    padding: $table-border-inset;
+    margin: 0;
+  }
+}

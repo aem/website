@@ -1,5 +1,5 @@
-@import "constants.scss";
-@import "bootstrap-custom.scss";
+@import "constants";
+@import "bootstrap-custom";
 
 html {
   padding: 1rem 0;
@@ -154,36 +154,5 @@ textarea {
     max-width: 30px;
     max-height: 30px;
     margin-left: 25px;
-  }
-}
-
-.resume {
-  width: 8.5in;
-  margin: 0 auto;
-
-  div, table, section {
-    width: 8.5in;
-  }
-
-  .section-header {
-    padding-bottom: 0.5rem;
-    td {
-      font-size: 0.8rem;
-    }
-    tr:first-child {
-      td {
-        font-size: 1rem;
-      }
-
-      > td:first-child {
-        font-weight: bold;
-      }
-    }
-    tr > td:first-child {
-      text-align: left;
-    }
-    tr > td:last-child {
-      text-align: right;
-    }
   }
 }

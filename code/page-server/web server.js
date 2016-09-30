@@ -47,15 +47,15 @@ export default function(parameters) {
       // (this `head()` function is optional and is not required)
       // (its gonna work with or without this `head()` parameter)
       head: (url) => {
+        let result = [];
         if (_development_) {
           // `devtools` just tampers with CSS styles a bit.
           // It's not required for operation and can be omitted.
           const script = devtools({ ...parameters, entry: 'main' });
-          return [
-            <script key={1} dangerouslySetInnerHTML={{ __html: script }}/>,
-            <link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" type="text/css" />
-          ];
+          result = result.push(<script key={1} dangerouslySetInnerHTML={{ __html: script }}/>);
         }
+        result = result.push(<link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" type="text/css" />);
+        return result;
       }
     }
   },

@@ -8,8 +8,7 @@ import { render } from 'react-isomorphic-render/redux';
 import common from './react-isomorphic-render';
 import 'bootstrap-without-jquery';
 
-require('../../assets/styles/style-guide.scss');
-require('../../assets/styles/website-style.scss');
+require('../../assets/styles/include.scss');
 
 // renders the webpage on the client side
 render(
