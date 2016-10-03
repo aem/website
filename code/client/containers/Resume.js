@@ -14,6 +14,7 @@ export default class Home extends Component {
         <blockquote>
           Below you'll find a current, HTML copy of my resume. For a PDF version, <a href="https://s3-us-west-2.amazonaws.com/adam-markon-public-assets/AdamMarkonResume_final.pdf" target="_blank">click here!</a>
         </blockquote>
+        <hr />
         <div className="resume">
           <Education />
           <div className="horizontal-divider"></div>

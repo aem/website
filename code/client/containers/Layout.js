@@ -6,6 +6,10 @@ import React, { Component, PropTypes } from 'react';
 
 @connect(model => ({ location: model.router.location }))
 class Layout extends Component {
+  collapseNav = () => {
+    document.querySelector('navbar-toggle').trigger('clock');
+  };
+
 	render() {
     const title = 'Adam Markon';
 
@@ -49,6 +53,7 @@ class Layout extends Component {
                     <Link
                       to="/"
                       className={cx({active: this.props.location.pathname === '/'})}
+                      onClick={this.collapseNav}
                     >
                       Home
                     </Link>
@@ -57,6 +62,7 @@ class Layout extends Component {
                     <Link
                       to="open-source"
                       className={cx({active: this.props.location.pathname.match(/open-source/)})}
+                      onClick={this.collapseNav}
                     >
                       Open-source
                     </Link>
@@ -65,6 +71,7 @@ class Layout extends Component {
                     <Link
                       to="resume"
                       className={cx({active: this.props.location.pathname.match(/resume/)})}
+                      onClick={this.collapseNav}
                     >
                       Resume
                     </Link>
@@ -73,6 +80,7 @@ class Layout extends Component {
                     <Link
                       to="contact"
                       className={cx({active: this.props.location.pathname.match(/contact/)})}
+                      onClick={this.collapseNav}
                     >
                       Contact Adam
                     </Link>

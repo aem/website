@@ -5,6 +5,7 @@ import SectionHeader from './SectionHeader';
 export default () => {
   return (
     <div>
+      <h2>Education</h2>
       <SectionHeader rowData={northeasternEducation} />
       <SectionHeader rowData={eaganEducation} />
     </div>
