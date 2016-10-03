@@ -8,7 +8,7 @@ export default () => {
       <h2>Projects</h2>
       <SectionHeader rowData={docsSoapHeader} />
       <p>
-        A lightweight, open-source library for parsing clipboard contents from Google Docs to valid HTML for use in a rich text editor
+        A lightweight, open-source JavaScript library for parsing clipboard contents from Google Docs to valid HTML for use in a rich text editor
       </p>
     </div>
   );

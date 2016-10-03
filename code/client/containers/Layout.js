@@ -82,9 +82,9 @@ class Layout extends Component {
             </div>
           </nav>
         </header>
-        <section className="body">
+        <div className="body">
           {this.props.children}
-        </section>
+        </div>
         <footer className="container-fluid">
           <span className="copyright">© Adam Markon 2016</span>
           <div className="inline-block right profile-links">

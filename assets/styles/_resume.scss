@@ -1,7 +1,24 @@
-.resume {
-  width: 8.5in;
-  margin: 0 auto;
+.resume-section {
+  blockquote {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+@media (min-width: 840px) {
+  .resume {
+    width: 840px;
+    margin: 0 auto;
+  }
 
+  .middle-section {
+    display: flex;
+  }
+
+  .side-panel {
+    max-width: 320px;
+  }
+}
+.resume {
   div, table, section {
     width: 100%;
   }
@@ -15,18 +32,19 @@
   div.vertical-divider {
     height: auto;
     width: 1px;
+    margin: 0 15px;
     border-left: $dotted-border-style;
   }
-
-  .side-panel {
-    width: 320px;
-  }
   .section-header {
-    &:not(&:last-child) {
+    &:not(:last-child) {
       padding-bottom: 0.5rem;
     }
     td {
+      vertical-align: top;
       font-size: 0.8rem;
+      a {
+        font-size: 0.8rem;
+      }
     }
     tr:first-child {
       td {
@@ -49,6 +67,10 @@
     &:not(&:last-child) {
       padding-bottom: 0.5rem;
     }
+    td {
+      font-size: 0.9rem;
+      padding: 0;
+    }
     tr > td:first-child {
       text-align: left;
     }
@@ -67,6 +89,26 @@
     }
   }
 
+  .experience {
+    .section-header {
+      padding-bottom: 0;
+      td {
+        font-size: 0.858rem;
+      }
+      tr:first-child {
+        td {
+          font-size: 1rem;
+        }
+      }
+    }
+    p {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
   h2 {
     color: $text-primary;
     text-transform: uppercase;
@@ -78,5 +120,9 @@
   p {
     padding: $table-border-inset;
     margin: 0;
+  }
+
+  hr {
+    margin: 10px auto;
   }
 }
