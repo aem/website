@@ -24,7 +24,7 @@ export default class Home extends Component {
               <div className="horizontal-divider"></div>
               <Skills />
             </div>
-            <div className="vertical-divider"></div>
+            <div className="rotating-divider"></div>
             <Experience />
           </div>
           <div className="horizontal-divider"></div>
