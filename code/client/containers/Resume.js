@@ -19,11 +19,11 @@ export default class Home extends Component {
           <Education />
           <div className="horizontal-divider"></div>
           <div className="middle-section">
-            <div className="side-panel">
+            <aside className="side-panel">
               <Projects />
               <div className="horizontal-divider"></div>
               <Skills />
-            </div>
+            </aside>
             <div className="rotating-divider"></div>
             <Experience />
           </div>

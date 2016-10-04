@@ -44,7 +44,7 @@ class Layout extends Component {
                 </button>
                 <Link className="brand">
                   <h1>Adam Markon</h1>
-                  <h6>ReactJS and Java Developer</h6>
+                  <h6>Software Developer. Biker. Video Producer.</h6>
                 </Link>
               </div>
               <div className="collapse navbar-collapse" id="nav-links">
