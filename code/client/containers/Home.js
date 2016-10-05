@@ -13,7 +13,8 @@ const meta = [
   { name: 'description', content: description},
   { property: 'og:title', content: title },
   { property: 'og:description', content: description },
-  { property: 'og:locale', content: 'en-US' }
+  { property: 'og:locale', content: 'en-US' },
+  { property: 'og:image', content: require('../img/headshot.png')}
 ];
 
 export default class Home extends Component {
