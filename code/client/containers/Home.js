@@ -12,7 +12,7 @@ export default class Home extends Component {
           <Tile imageUrl={require('../img/code.png')} overlayText="Software Developer"/>
           <Tile imageUrl={require('../img/gonuxstream.png')} overlayText="TV Producer"/>
           <Tile imageUrl={require('../img/aepi.png')} overlayText="Fraternity Man"/>
-          <Tile imageUrl={require('../img/biking.png')} overlayText="Bicycler"/>
+          <Tile imageUrl={require('../img/biking.png')} overlayText="Bicyclist"/>
         </div>
       </section>
     );
