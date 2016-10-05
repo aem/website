@@ -6,11 +6,18 @@
   @include make-md-column(6);
   padding: 5px;
 
-  &:hover {
+  &:hover, &.open {
     .tile-pad {
-      .tile, .overlay {
+      .tile {
+        @include scale(1.03);
+      }
+      .overlay {
         @include opacity(1);
         @include scale(1.03);
+
+        h3 {
+          @include opacity(1);
+        }
       }
 
       .overlay:after {
@@ -19,10 +26,30 @@
     }
   }
 
+  &.open {
+    z-index: 999;
+    .tile-pad {
+      .tile, .overlay {
+        @include scale(1.2);
+      }
+
+      .overlay {
+        padding-top: 10px;
+        background-color: $text-gray;
+
+        p {
+          @include opacity(1);
+        }
+      }
+    }
+  }
+
   .tile-pad {
     border-radius: 5px;
     padding: 4px 8px;
     border: $dotted-border-style;
+    height: 312px;
+    cursor: pointer;
 
     .overlay {
       position: absolute;
@@ -31,10 +58,8 @@
       right: 15px;
       bottom: 11px;
       border-radius: 5px;
-      background-color: $gray-lighter;
-      color: white;
+      background-color: $gray-light;
       text-shadow: 0 0 3px black;
-      font-size: 2rem;
       text-align: center;
       padding-top: 130px;
       @include transition($transition-all);
@@ -50,6 +75,23 @@
         right: 0;
         bottom: 0;
         border-radius: 5px;
+      }
+
+      h3 {
+        @include transition($transition-all);
+        color: white;
+        font-size: 2rem;
+        opacity: 0;
+      }
+
+      p {
+        @include transition($transition-all);
+        color: white;
+        margin-top: 0;
+        padding: 0 2rem;
+        opacity: 0;
+        height: 220px;
+        line-height: 1.45;
       }
     }
 

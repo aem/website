@@ -1,19 +1,41 @@
-import React, { PropTypes } from 'react';
+import cx from 'classnames';
+import React, { Component, PropTypes } from 'react';
 
-const Tile = ({imageUrl, overlayText}) => {
-  return (
-    <div className="tile-wrapper">
-      <a href="#">
+class Tile extends Component {
+  constructor() {
+    super();
+    this.state = {
+      open: false
+    };
+  }
+
+  handleClick = () => {
+    this.setState({open: !this.state.open});
+  };
+
+  render() {
+    const classes = cx({
+      'tile-wrapper': true,
+      'open': this.state.open
+    });
+
+    return (
+      <div className={classes} onClick={this.handleClick}>
         <div className="tile-pad">
-          <div className="tile" style={{backgroundImage: `url('${imageUrl}')`}}></div>
-          <div className="overlay">{overlayText}</div>
+          <div className="tile" style={{backgroundImage: `url('${this.props.imageUrl}')`}}></div>
+          <div className="overlay">
+            <h3>{this.props.header}</h3>
+            <p>{this.props.body}</p>
+          </div>
         </div>
-      </a>
-    </div>
-  )
-};
+      </div>
+    );
+  }
+}
 
 Tile.propTypes = {
+  body: PropTypes.string.isRequired,
+  header: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired
 };
 
