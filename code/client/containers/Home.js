@@ -13,8 +13,8 @@ const meta = [
   { name: 'description', content: description},
   { property: 'og:title', content: title },
   { property: 'og:description', content: description },
-  { property: 'og:locale', content: 'en-US' },
-  { property: 'og:image', content: require('../img/headshot.png')}
+  { property: 'og:locale', content: 'en_US' },
+  { property: 'og:image', content: `https://adammarkon.com${require('../img/headshot.png')}`}
 ];
 
 export default class Home extends Component {

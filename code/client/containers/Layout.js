@@ -20,8 +20,8 @@ class Layout extends Component {
       { name: 'description', content: 'Adam is a software developer specializing in front-end web development with ReactJS, as well as a professional sports broadcaster.'},
       { property: 'og:title', content: 'Adam Markon' },
       { property: 'og:description', content: `Adam Markon is a software developer specializing in front-end web development and React.` },
-      { property: 'og:locale', content: 'en-US' },
-      { property: 'og:image', content: require('../img/headshot.png')}
+      { property: 'og:locale', content: 'en_US' },
+      { property: 'og:image', content: `https://adammarkon.com${require('../img/headshot.png')}`}
     ];
 
     return (

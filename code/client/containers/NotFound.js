@@ -10,8 +10,8 @@ const meta = [
   { name: 'description', content: description},
   { property: 'og:title', content: title },
   { property: 'og:description', content: description },
-  { property: 'og:locale', content: 'en-US' },
-  { property: 'og:image', content: require('../img/headshot.png')}
+  { property: 'og:locale', content: 'en_US' },
+  { property: 'og:image', content: 'https://media4.giphy.com/media/ALalVMOVR8Qw/200_s.gif'}
 ];
 
 export default class NotFound extends Component {
