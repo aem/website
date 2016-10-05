@@ -17,28 +17,29 @@ const docsSoapHeader = new List([
 ]);
 
 const languagesData = new List([
-  new Map({left: 'JavaScript', right: '5'}),
+  new Map({left: 'JavaScript', right: 5}),
   new Map({left: 'ReactJS • BackboneJS • Handlebars • jQuery • NodeJS'}),
-  new Map({left: 'HTML', right: '5'}),
-  new Map({left: 'CSS', right: '4'}),
-  new Map({left: 'Java', right: '4'}),
-  new Map({left: 'Python', right: '3'}),
-  new Map({left: 'Ruby', right: '3'}),
-  new Map({left: 'SQL', right: '3'}),
-  new Map({left: 'Obective-C', right: '2'}),
-  new Map({left: 'C', right: '2'}),
+  new Map({left: 'HTML', right: 5}),
+  new Map({left: 'CSS', right: 4}),
+  new Map({left: 'Java', right: 4}),
+  new Map({left: 'R', right: 3}),
+  new Map({left: 'Python', right: 3}),
+  new Map({left: 'Ruby', right: 3}),
+  new Map({left: 'SQL', right: 3}),
+  new Map({left: 'Obective-C', right: 2}),
+  new Map({left: 'C', right: 2}),
 ]);
 
 const softwareData = new List([
-  new Map({left: 'JetBrains IDEs', right: '5'}),
-  new Map({left: 'JIRA', right: '5'}),
-  new Map({left: 'macOS', right: '5'}),
-  new Map({left: 'Git', right: '4'}),
-  new Map({left: 'Jenkins CI', right: '4'}),
-  new Map({left: 'Travis CI', right: '4'}),
-  new Map({left: 'Windows', right: '3'}),
-  new Map({left: 'Linux', right: '3'}),
-  new Map({left: 'Bash/Terminal', right: '3'}),
+  new Map({left: 'JetBrains IDEs', right: 5}),
+  new Map({left: 'JIRA', right: 5}),
+  new Map({left: 'macOS', right: 5}),
+  new Map({left: 'Git', right: 4}),
+  new Map({left: 'Jenkins CI', right: 4}),
+  new Map({left: 'Travis CI', right: 4}),
+  new Map({left: 'Windows', right: 3}),
+  new Map({left: 'Linux', right: 3}),
+  new Map({left: 'Bash/Terminal', right: 3}),
 ]);
 
 const hubspotHeader = new List([
