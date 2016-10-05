@@ -34,8 +34,12 @@
       }
 
       .overlay {
-        padding-top: 10px;
         background-color: $text-gray;
+        padding-top: 50px;
+
+        h3 {
+          @include opacity(0);
+        }
 
         p {
           @include opacity(1);
@@ -84,14 +88,24 @@
         opacity: 0;
       }
 
-      p {
+      .body-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem 2rem;
+        display: table;
+        height: 300px;
+      }
+
+      .body {
         @include transition($transition-all);
         color: white;
         margin-top: 0;
-        padding: 0 2rem;
         opacity: 0;
-        height: 220px;
-        line-height: 1.45;
+        display: table-cell;
+        vertical-align: middle;
       }
     }
 

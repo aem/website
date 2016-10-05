@@ -25,7 +25,11 @@ class Tile extends Component {
           <div className="tile" style={{backgroundImage: `url('${this.props.imageUrl}')`}}></div>
           <div className="overlay">
             <h3>{this.props.header}</h3>
-            <p>{this.props.body}</p>
+            <div className="body-wrapper">
+              <p className="body">
+                {this.props.body}
+              </p>
+            </div>
           </div>
         </div>
       </div>
