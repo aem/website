@@ -13,7 +13,7 @@ div.rotating-divider {
   margin: 10px 0;
 }
 
-@media (min-width: 840px) {
+@media (min-width: $responsive-width) {
   .resume {
     width: 840px;
     margin: 0 auto;

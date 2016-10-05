@@ -13,7 +13,7 @@ const eaganEducation = new List([
 
 const docsSoapHeader = new List([
   new Map({left: 'docs-soap', right: '2016'}),
-  new Map({left: '<a href="https://npmjs.com/package/docs-soap">npmjs.com/package/docs-soap</a>', right: '~2,000 downloads'})
+  new Map({left: '<a href="https://npmjs.com/package/docs-soap">npmjs.com/package/docs-soap</a>', right: '~3,000 downloads'})
 ]);
 
 const languagesData = new List([

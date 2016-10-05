@@ -1,0 +1,49 @@
+.tiles {
+  @include make-row();
+}
+
+.tile-wrapper {
+  @include make-md-column(6);
+  padding: 5px;
+
+  &:hover {
+    .tile-pad {
+      .tile, .overlay {
+        @include opacity(1);
+        @include scale(1.03);
+      }
+    }
+  }
+
+  .tile-pad {
+    border-radius: 5px;
+    padding: 4px 8px;
+    border: $dotted-border-style;
+
+    .overlay {
+      position: absolute;
+      left: 15px;
+      top: 11px;
+      right: 15px;
+      bottom: 11px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.42);
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 130px;
+      opacity: 0;
+      @include transition($transition-all);
+    }
+
+    .tile {
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 25%;
+      border-radius: 5px;
+      @include transition($transition-all);
+    }
+  }
+}
+
