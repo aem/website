@@ -54,7 +54,7 @@ export default function(parameters) {
           const script = devtools({ ...parameters, entry: 'main' });
           result.push(<script key={1} dangerouslySetInnerHTML={{ __html: script }}/>);
         }
-        result.push(<link key={2} href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono" rel="stylesheet" type="text/css" />);
+        result.push(<link key={2} href="https://fonts.googleapis.com/css?family=Catamaran|Oxygen+Mono" rel="stylesheet" type="text/css" />);
         return result;
       }
     }
