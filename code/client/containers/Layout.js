@@ -45,7 +45,6 @@ class Layout extends Component {
                 </button>
                 <Link className="brand">
                   <h1>Adam Markon</h1>
-                  {/*<h6>Software Developer. Biker. Video Producer.</h6>*/}
                 </Link>
               </div>
               <div className="collapse navbar-collapse" id="nav-links">
@@ -68,7 +67,7 @@ class Layout extends Component {
                       Open-source
                     </Link>
                   </li>
-                  <li>
+                  <li style={{marginBottom: 0 /* override default list style */}}>
                     <Link
                       to="resume"
                       className={cx({active: this.props.location.pathname.match(/resume/)})}
@@ -77,15 +76,15 @@ class Layout extends Component {
                       Resume
                     </Link>
                   </li>
-                  <li style={{marginBottom: 0 /* override default list style */}}>
-                    <Link
-                      to="contact"
-                      className={cx({active: this.props.location.pathname.match(/contact/)})}
-                      onClick={this.collapseNav}
-                    >
-                      Contact Adam
-                    </Link>
-                  </li>
+                  {/*<li style={{marginBottom: 0 /* override default list style *!/}>*/}
+                    {/*<Link*/}
+                      {/*to="contact"*/}
+                      {/*className={cx({active: this.props.location.pathname.match(/contact/)})}*/}
+                      {/*onClick={this.collapseNav}*/}
+                    {/*>*/}
+                      {/*Contact Adam*/}
+                    {/*</Link>*/}
+                  {/*</li>*/}
                 </ul>
               </div>
             </div>
