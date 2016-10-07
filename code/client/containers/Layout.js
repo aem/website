@@ -60,7 +60,7 @@ class Layout extends Component {
                   </li>
                   <li>
                     <Link
-                      to="open-source"
+                      to="/open-source"
                       className={cx({active: this.props.location.pathname.match(/open-source/)})}
                       onClick={this.collapseNav}
                     >
@@ -69,22 +69,13 @@ class Layout extends Component {
                   </li>
                   <li style={{marginBottom: 0 /* override default list style */}}>
                     <Link
-                      to="resume"
+                      to="/resume"
                       className={cx({active: this.props.location.pathname.match(/resume/)})}
                       onClick={this.collapseNav}
                     >
                       Resume
                     </Link>
                   </li>
-                  {/*<li style={{marginBottom: 0 /* override default list style *!/}>*/}
-                    {/*<Link*/}
-                      {/*to="contact"*/}
-                      {/*className={cx({active: this.props.location.pathname.match(/contact/)})}*/}
-                      {/*onClick={this.collapseNav}*/}
-                    {/*>*/}
-                      {/*Contact Adam*/}
-                    {/*</Link>*/}
-                  {/*</li>*/}
                 </ul>
               </div>
             </div>
