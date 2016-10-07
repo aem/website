@@ -45,6 +45,7 @@
     "moment": "^2.10.6",
     "node-sass": "^3.4.2",
     "nodemailer": "^2.6.4",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "npm-run-all": "^1.2.13",
     "postcss-loader": "^0.9.1",
     "pretty-error": "^1.1.2",

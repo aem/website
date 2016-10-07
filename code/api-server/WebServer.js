@@ -1,25 +1,24 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import nodemailer from 'nodemailer';
+import sendgrid from 'nodemailer-sendgrid-transport';
 
 const app = express();
 const api = express();
-const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+const transporter = nodemailer.createTransport(sendgrid({
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD
+    api_key: process.env.SENDGRID_KEY
   }
-});
+}));
 
 api.use(bodyParser.json());
 
 api.post('/contact', function (req, res) {
   const mailOptions = {
-    from: `"Adam Markon" <${process.env.EMAIL}>`,
+    from: `"${req.body.name}" <${req.body.email}>`,
     to: process.env.EMAIL,
     subject: `[WEBSITE CONTACT] ${req.body.subject}`,
-    text: `Name: ${req.body.name}\n\nEmail: ${req.body.email}\n\nPhone: ${req.body.phone}\n\n${req.body.body}`,
+    text: `Phone: ${req.body.phone}\n\n${req.body.body}`,
   };
 
 // send mail with defined transport object
