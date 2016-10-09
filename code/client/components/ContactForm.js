@@ -2,7 +2,7 @@ import fermata from 'fermata';
 import React, { Component } from 'react';
 import t from 'tcomb-form';
 
-const api = fermata.json('http://www.adammarkon.com');
+const api = fermata.json('https://www.adammarkon.com');
 
 const schema = t.struct({
   name: t.String,
