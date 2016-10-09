@@ -157,3 +157,13 @@ textarea {
     margin-left: 25px;
   }
 }
+
+.contact-form {
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+
+  textarea {
+    resize: vertical;
+    min-height: 10rem;
+  }
+}

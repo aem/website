@@ -1,6 +1,8 @@
 import { head } from 'react-isomorphic-render';
 import React, { Component } from 'react';
 
+import ContactForm from '../components/ContactForm';
+
 const title = 'Contact Me | Adam Markon';
 const description = `Contact Adam Markon, a software developer and video producer.`;
 const meta = [
@@ -20,9 +22,7 @@ export default class Home extends Component {
       <section className="container-fluid">
         {head(title, meta)}
         <h2 className="underline">Contact Adam</h2>
-        <blockquote>
-          Contact form here
-        </blockquote>
+        <ContactForm />
       </section>
     );
   }

@@ -3,6 +3,7 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import sendgrid from 'nodemailer-sendgrid-transport';
 
+import { requestIpLease } from './IpCache';
 import sanitize from '../common/sanitize';
 
 const app = express();
@@ -15,7 +16,11 @@ const transporter = nodemailer.createTransport(sendgrid({
 
 api.use(bodyParser.json());
 
-api.post('/contact', function (req, res) {
+api.post('/contact', (req, res) => {
+  if (!requestIpLease(req.ip)) {
+    res.status(403).end();
+    return;
+  }
   const mailOptions = {
     from: `"${sanitize(req.body.name)}" <${sanitize(req.body.email)}>`,
     to: process.env.EMAIL,
