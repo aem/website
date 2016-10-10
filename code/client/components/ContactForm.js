@@ -1,8 +1,6 @@
-import fermata from 'fermata';
 import React, { Component } from 'react';
+import reqwest from 'reqwest';
 import t from 'tcomb-form';
-
-const api = fermata.json('https://www.adammarkon.com');
 
 const schema = t.struct({
   name: t.String,
@@ -55,9 +53,13 @@ export default class ContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     const {name, email, phone, subject, body} = this.form.getValue();
-    api.api.contact.post({name, email, phone, subject, body}, (err, data) => {
-      alert(data);
-    });
+    reqwest({
+      url: 'https://www.adammarkon.com/api/contact',
+      method: 'post',
+      data: {name, email, phone, subject, body}
+    }).then((resp) => {
+      console.log(resp);
+    })
   };
 
   onChange = (data) => {
