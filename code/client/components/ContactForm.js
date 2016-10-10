@@ -56,7 +56,7 @@ export default class ContactForm extends Component {
     e.preventDefault();
     const {name, email, phone, subject, body} = this.form.getValue();
     api.post(
-      '/api/contact',
+      '/contact',
       {name, email, phone, subject, body}
     ).then((resp) => {
       console.log(resp);
