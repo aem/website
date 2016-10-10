@@ -15,6 +15,7 @@ const transporter = nodemailer.createTransport(sendgrid({
 }));
 
 api.use(bodyParser.json());
+api.use(bodyParser.urlencoded({extended: false}));
 
 api.post('/contact', (req, res) => {
   if (!requestIpLease(req.ip)) {

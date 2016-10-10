@@ -1,6 +1,8 @@
+import ajax from '@fdaciuk/ajax';
 import React, { Component } from 'react';
-import reqwest from 'reqwest';
 import t from 'tcomb-form';
+
+const api = ajax({baseUrl: 'https://www.adammarkon.com/api'});
 
 const schema = t.struct({
   name: t.String,
@@ -53,13 +55,12 @@ export default class ContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     const {name, email, phone, subject, body} = this.form.getValue();
-    reqwest({
-      url: 'https://www.adammarkon.com/api/contact',
-      method: 'post',
-      data: {name, email, phone, subject, body}
-    }).then((resp) => {
+    api.post(
+      '/api/contact',
+      {name, email, phone, subject, body}
+    ).then((resp) => {
       console.log(resp);
-    })
+    });
   };
 
   onChange = (data) => {
