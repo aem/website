@@ -1,6 +1,3 @@
-@import "constants";
-@import "bootstrap-custom";
-
 html {
   padding: 1rem 0;
 }
@@ -139,32 +136,45 @@ textarea {
 
 .profile-links {
   a {
-    text-decoration: none;
-
-    &:hover {
-      span {
-        display: inline;
-      }
-
-      img {
-        margin-left: 5px;
-      }
+    display: inline-flex;
+    &.github:before {
+      border-radius: 50%;
+    }
+    &:before {
+      content: '';
+      z-index: 1;
+      background-color: $text-primary;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      border-radius: 6px;
+      left: 30px;
+      opacity: 0;
+      @include transition(opacity .2s ease-in-out);
+    }
+    img {
+      z-index: 2;
+      max-width: 30px;
+      max-height: 30px;
     }
   }
-  span {
-    margin-left: 20px;
-    padding-right: 8px;
-    position: relative;
-    bottom: 8px;
-    display: none;
-  }
-  img {
-    max-width: 30px;
-    max-height: 30px;
-    margin-left: 25px;
+
+  a:hover:before {
+    opacity: 0.5;
   }
 }
 
+@media (max-width: $responsive-width) {
+  .copyright, .profile-links {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+
+  .profile-links {
+    padding-right: 30px;
+  }
+}
 .contact-form {
   @include make-md-column(6);
   @include make-md-column-offset(3);

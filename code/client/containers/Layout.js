@@ -96,16 +96,13 @@ class Layout extends Component {
         <footer className="container-fluid">
           <span className="copyright">© Adam Markon 2016</span>
           <div className="inline-block right profile-links">
-            <a href="https://github.com/aem" target="_blank">
-              <span>@aem</span>
+            <a className="github" href="https://github.com/aem" target="_blank">
               <img src={require('../img/github.png')} alt="GitHub Logo" />
             </a>
             <a href="https://www.linkedin.com/in/adammarkon" target="_blank">
-              <span>Adam Markon</span>
               <img src={require('../img/linkedin.png')} alt="LinkedIn Logo" />
             </a>
             <a href="https://www.twitter.com/amarkon88" target="_blank">
-              <span>@amarkon88</span>
               <img src={require('../img/twitter.png')} alt="Twitter Logo" />
             </a>
           </div>
