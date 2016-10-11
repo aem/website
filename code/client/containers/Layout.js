@@ -3,6 +3,7 @@ import cx from 'classnames';
 import { head } from 'react-isomorphic-render';
 import { Link } from 'react-router';
 import React, { Component, PropTypes } from 'react';
+import { RouteTransition } from 'react-router-transition';
 
 @connect(model => ({ location: model.router.location }))
 class Layout extends Component {
@@ -82,7 +83,15 @@ class Layout extends Component {
           </nav>
         </header>
         <div className="body">
+          <RouteTransition
+            pathname={this.props.location.pathname}
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            runOnMount={true}
+          >
           {this.props.children}
+          </RouteTransition>
         </div>
         <footer className="container-fluid">
           <span className="copyright">© Adam Markon 2016</span>

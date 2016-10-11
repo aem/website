@@ -1,5 +1,5 @@
 // This is the base Webpack configuration file
-
+import CompressionPlugin from 'compression-webpack-plugin';
 var path = require('path')
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
@@ -28,7 +28,7 @@ var configuration =
 		main: './code/client/application.entry.js'
 	},
 
-	output: 
+	output:
 	{
 		// filesystem path for static files
 		path: path.resolve(root_folder, 'build/assets'),
@@ -45,7 +45,7 @@ var configuration =
 
 	module:
 	{
-		loaders: 
+		loaders:
 		[
 			{
 				test   : /\.json$/,
@@ -60,7 +60,7 @@ var configuration =
 			},
 			{
 				test    : regular_expressions.styles,
-				loaders : 
+				loaders :
 				[
 					'style-loader',
 					'css-loader?importLoaders=2&sourceMap',
@@ -70,7 +70,7 @@ var configuration =
 			},
 			{
 				test    : /\.(jpg|png)$/,
-				loaders : 
+				loaders :
 				[
 					'url-loader?limit=10000' // Any png-image or woff-font below or equal to 10K will be converted to inline base64 instead
 				]
