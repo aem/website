@@ -2,6 +2,7 @@ import { head } from 'react-isomorphic-render';
 import React, { Component } from 'react';
 
 import DocsSoap from '../components/projects/DocsSoapProject';
+import Keybindings from '../components/projects/KeybindingsProject';
 import Website from '../components/projects/WebsiteProject';
 
 const title = 'Open Source Projects | Adam Markon';
@@ -26,6 +27,8 @@ export default class Home extends Component {
         <Website />
         <hr />
         <DocsSoap />
+        <hr />
+        <Keybindings />
       </section>
     );
   }

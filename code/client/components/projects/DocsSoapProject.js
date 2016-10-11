@@ -1,7 +1,7 @@
 import DocsSoapDemo from '../DocsSoapDemo';
 import React, { Component } from 'react';
 
-export default class WebsiteProject extends Component {
+export default class DocsSoapProject extends Component {
   render() {
     return (
       <div
