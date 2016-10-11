@@ -1,5 +1,4 @@
 // This is the base Webpack configuration file
-import CompressionPlugin from 'compression-webpack-plugin';
 var path = require('path')
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
