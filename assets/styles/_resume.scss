@@ -8,7 +8,7 @@
 div.rotating-divider {
   height: 1px;
   width: 100%!important;
-  border-top: $dotted-border-style;
+  border-top: $dashed-border-style;
   border-left: none;
   margin: 10px 0;
 }
@@ -31,7 +31,7 @@ div.rotating-divider {
     height: auto;
     width: 1px!important;
     margin: 0 15px;
-    border-left: $dotted-border-style;
+    border-left: $dashed-border-style;
     border-top: none;
   }
 }
@@ -42,7 +42,7 @@ div.rotating-divider {
 
   div.horizontal-divider {
     height: 1px;
-    border-top: $dotted-border-style;
+    border-top: $dashed-border-style;
     margin: 10px 0;
   }
 
