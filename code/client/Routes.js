@@ -12,7 +12,7 @@ export default () => {
   return (
     <Route path="/" component={Layout}>
       <IndexRoute component={Home}/>
-      <Route path="open-source" component={OpenSource} />
+      <Route path="projects" component={OpenSource} />
       <Route path="resume" component={Resume} />
       <Route path="contact" component={ContactAdam} />
       <Route path="*" component={NotFound} status={404} />
