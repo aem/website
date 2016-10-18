@@ -2,21 +2,16 @@ import cx from 'classnames';
 import React, { Component, PropTypes } from 'react';
 
 class Tile extends Component {
-  constructor() {
-    super();
-    this.state = {
-      open: false
-    };
-  }
-
   handleClick = () => {
-    this.setState({open: !this.state.open});
+    this.props.open === this.props.id ?
+      this.props.setOpen("") :
+      this.props.setOpen(this.props.id);
   };
 
   render() {
     const classes = cx({
       'tile-wrapper': true,
-      'open': this.state.open
+      'open': this.props.open === this.props.id
     });
 
     return (
@@ -40,7 +35,10 @@ class Tile extends Component {
 Tile.propTypes = {
   body: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  open: PropTypes.string.isRequired,
+  setOpen: PropTypes.func.isRequired
 };
 
 export default Tile;

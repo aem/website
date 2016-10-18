@@ -18,16 +18,62 @@ const meta = [
 ];
 
 export default class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      open: ""
+    };
+  }
+
+  setOpen = (id) => {
+    this.setState({open: id});
+  };
+
   render() {
     return (
       <section className="container-fluid">
         {head(title, meta)}
         <div className="tiles">
-          <Tile imageUrl={require('../img/headshot.png')} header="A Little Bit About Me" body={tiles.get('aboutMe')}/>
-          <Tile imageUrl={require('../img/code.png')} header="Software Developer" body={tiles.get('developer')}/>
-          <Tile imageUrl={require('../img/gonuxstream.png')} header="TV Producer" body={tiles.get('video')}/>
-          <Tile imageUrl={require('../img/aepi.png')} header="Fraternity Man" body={tiles.get('fraternity')}/>
-          <Tile imageUrl={require('../img/biking.png')} header="Bicyclist" body={tiles.get('biking')}/>
+          <Tile
+            body={tiles.get('aboutMe')}
+            header="A Little Bit About Me"
+            id="aboutMe"
+            imageUrl={require('../img/headshot.png')}
+            open={this.state.open}
+            setOpen={this.setOpen}
+          />
+          <Tile
+            body={tiles.get('developer')}
+            header="Software Developer"
+            id="developer"
+            imageUrl={require('../img/code.png')}
+            open={this.state.open}
+            setOpen={this.setOpen}
+          />
+          <Tile
+            body={tiles.get('video')}
+            header="TV Producer"
+            id="video"
+            imageUrl={require('../img/gonuxstream.png')}
+            open={this.state.open}
+            setOpen={this.setOpen}
+          />
+          <Tile
+            body={tiles.get('fraternity')}
+            header="Fraternity Man"
+            id="fraternity"
+            imageUrl={require('../img/aepi.png')}
+            open={this.state.open}
+            setOpen={this.setOpen}
+          />
+          <Tile
+            body={tiles.get('biking')}
+            header="Bicyclist"
+            id="biking"
+            imageUrl={require('../img/biking.png')}
+            open={this.state.open}
+            setOpen={this.setOpen}
+          />
         </div>
       </section>
     );
