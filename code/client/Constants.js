@@ -70,6 +70,7 @@ const tiles = new Map({
   biking: "About two years ago I took up biking, initially as a way to commute to work, and eventually I continued to bike in my free time. Since then I've biked more than 1,000 miles across the city of Boston and its outlying suburbs. Beginning next year I plan to enter races in the Boston area with a stretch goal of being ready to partake in the Pan-Mass Challenge next summer. In the photo I'm participating in Boston's Bike to Work day, biking through Boston with other Boston commuters."
 });
 
+
 export default {
   docsSoapHeader,
   eaganEducation,

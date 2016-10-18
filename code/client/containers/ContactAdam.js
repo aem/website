@@ -21,7 +21,6 @@ export default class Home extends Component {
     return (
       <section className="container-fluid">
         {head(title, meta)}
-        <h2 className="underline">Contact Adam</h2>
         <ContactForm />
       </section>
     );

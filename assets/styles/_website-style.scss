@@ -160,7 +160,7 @@ textarea {
   }
 
   a:hover:before {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
@@ -176,11 +176,31 @@ textarea {
   }
 }
 .contact-form {
+  @include make-xs-column(10);
+  @include make-sm-column(8);
   @include make-md-column(6);
-  @include make-md-column-offset(3);
+  @include center-block();
+  float: none!important;
+
+  input {
+    color: $text-black;
+  }
 
   textarea {
     resize: vertical;
     min-height: 10rem;
+    color: $text-black;
   }
+
+  button ~ strong span {
+    margin-left: 10px;
+  }
+}
+
+#required-label {
+  @include transition(color 0.2s ease-in-out);
+}
+
+.error {
+  color: $dark-red;
 }

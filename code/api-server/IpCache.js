@@ -18,7 +18,7 @@ const requestIpLease = function(ip) {
     cache = cache.set(ip, new IpInfo()).merge({date: new Date()});
     return true;
   }
-  if (cache.get(ip).count >= 10) {
+  if (cache.get(ip).count >= 3) {
     if (new Date() - cache.get(ip).date < WEEK_MS) {
       return false;
     } else {

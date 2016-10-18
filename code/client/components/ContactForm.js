@@ -1,12 +1,19 @@
 import ajax from '@fdaciuk/ajax';
 import React, { Component } from 'react';
 import t from 'tcomb-form';
+import validate from 'validate.js';
 
 const api = ajax({baseUrl: 'https://www.adammarkon.com/api'});
+const constraints = {
+  email: {
+    email: true
+  }
+};
+const EmailField = t.refinement(t.String, (e) => !validate({email: e}, constraints));
 
 const schema = t.struct({
   name: t.String,
-  email: t.String,
+  email: EmailField,
   phone: t.String,
   subject: t.String,
   body: t.String
@@ -54,17 +61,22 @@ export default class ContactForm extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const {name, email, phone, subject, body} = this.form.getValue();
-    api.post(
-      '/contact',
-      {name, email, phone, subject, body}
-    ).then((resp) => {
-      console.log(resp);
-    });
+    if (this.form.getValue()) {
+      const {name, email, phone, subject, body} = this.form.getValue();
+      api.post(
+        '/contact',
+        {name, email, phone, subject, body}
+      ).then((resp) => {
+        this.setState({value: null});
+      });
+    } else {
+      document.querySelector('#required-label').className = 'error';
+    }
   };
 
-  onChange = (data) => {
-
+  onChange = (data, path) => {
+    this.form.getComponent(path).validate();
+    document.querySelector('#required-label').className = '';
   };
 
   render() {
@@ -78,8 +90,8 @@ export default class ContactForm extends Component {
             onChange={this.onChange}
             options={options}
           />
-          <h6>All fields are required.</h6>
           <button className="btn btn-primary">Save</button>
+          <strong><span id="required-label">All fields are required.</span></strong>
         </form>
       </div>
     )

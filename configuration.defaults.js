@@ -1,24 +1,24 @@
-module.exports = 
+module.exports =
 {
 	api_server:
 	{
-		http: 
+		http:
 		{
 			host: '127.0.0.1',
 			port: 3002
 		}
 	},
-	webpage_server: 
+	webpage_server:
 	{
-		http: 
+		http:
 		{
 			host: '127.0.0.1',
 			port: 3003
 		}
 	},
-	web_server: 
+	web_server:
 	{
-		http: 
+		http:
 		{
 			host: '127.0.0.1',
 			port: 8081

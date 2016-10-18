@@ -61,20 +61,29 @@ class Layout extends Component {
                   </li>
                   <li>
                     <Link
-                      to="/open-source"
+                      to="/projects"
                       className={cx({active: this.props.location.pathname.match(/open-source/)})}
                       onClick={this.collapseNav}
                     >
-                      Open-source
+                      Projects
                     </Link>
                   </li>
-                  <li style={{marginBottom: 0 /* override default list style */}}>
+                  <li>
                     <Link
                       to="/resume"
                       className={cx({active: this.props.location.pathname.match(/resume/)})}
                       onClick={this.collapseNav}
                     >
                       Resume
+                    </Link>
+                  </li>
+                  <li style={{marginBottom: 0 /* override default list style */}}>
+                    <Link
+                      to="/contact"
+                      className={cx({active: this.props.location.pathname.match(/contact/)})}
+                      onClick={this.collapseNav}
+                    >
+                      Contact Me
                     </Link>
                   </li>
                 </ul>

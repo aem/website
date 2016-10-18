@@ -22,6 +22,7 @@ api.post('/contact', (req, res) => {
     res.status(403).end();
     return;
   }
+  log.info(req.body);
   const mailOptions = {
     from: `"${sanitize(req.body.name)}" <${sanitize(req.body.email)}>`,
     to: process.env.EMAIL,
