@@ -2,7 +2,7 @@ import path from 'path'
 
 import web_service from 'web-service'
 
-const web = web_service({ log })
+const web = web_service({ compress: true, log })
 
 // serve static files
 web.files('/assets', path.join(Root_folder, 'build', 'assets'))
