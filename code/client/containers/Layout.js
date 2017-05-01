@@ -103,7 +103,7 @@ class Layout extends Component {
           </RouteTransition>
         </div>
         <footer className="container-fluid">
-          <span className="copyright">© Adam Markon 2016</span>
+          <span className="copyright">© Adam Markon 2016-17</span>
           <div className="inline-block right profile-links">
             <a className="github" href="https://github.com/aem" target="_blank">
               <img src={require('../img/github.png')} alt="GitHub Logo" />
