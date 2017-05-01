@@ -55,7 +55,7 @@ export default function(parameters) {
           result.push(<script key={1} dangerouslySetInnerHTML={{ __html: script }}/>);
         }
         result.push(<link key={2} href="https://fonts.googleapis.com/css?family=Catamaran|Oxygen+Mono" rel="stylesheet" type="text/css" />);
-        result.push(<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/1932554.js"></script>);
+        result.push(<script key={3} type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/1932554.js"></script>);
         return result;
       }
     }
