@@ -59,14 +59,6 @@ export default class Home extends Component {
             setOpen={this.setOpen}
           />
           <Tile
-            body={tiles.get('fraternity')}
-            header="Fraternity Man"
-            id="fraternity"
-            imageUrl={require('../img/aepi.png')}
-            open={this.state.open}
-            setOpen={this.setOpen}
-          />
-          <Tile
             body={tiles.get('biking')}
             header="Bicyclist"
             id="biking"
