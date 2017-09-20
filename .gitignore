@@ -43,3 +43,5 @@ jspm_packages
 
 # webpack build target folder
 /build
+
+.next

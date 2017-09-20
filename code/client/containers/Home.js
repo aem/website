@@ -5,7 +5,7 @@ import Tile from '../components/Tile';
 import { tiles } from '../Constants';
 
 const title = 'Home | Adam Markon';
-const description = 'Adam is a software developer specializing in front-end web development with ReactJS, as well as a professional sports broadcaster.';
+const description = 'Adam is a Boston-based software developer, photographer, and cyclist.';
 const meta = [
   { charset: 'utf-8' },
   { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no' },
