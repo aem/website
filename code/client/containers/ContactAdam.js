@@ -16,7 +16,7 @@ const meta = [
   { property: 'og:image', content: `https://adammarkon.com${require('../img/headshot.png')}`}
 ];
 
-export default class Home extends Component {
+export default class ContactAdam extends Component {
   render() {
     return (
       <section className="container-fluid">
