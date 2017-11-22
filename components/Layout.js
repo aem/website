@@ -27,7 +27,6 @@ const Layout = ({ children, title = 'Adam Markon' }) => {
           href="https://fonts.googleapis.com/css?family=Catamaran|Oxygen+Mono"
           rel="stylesheet"
           type="text/css"
-          media="none"
         />
         <link rel="icon" href="/static/am_64x64.png" />
         {process.env == 'production' && (

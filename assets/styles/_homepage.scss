@@ -1,16 +1,7 @@
-.tiles {
-  @include make-row();
-}
-
 .tile-wrapper {
   @include make-md-column(6);
   @include make-sm-column(6);
   padding: 5px;
-
-  //&:nth-child(3) {
-  //  @include make-md-column-offset(3);
-  //  @include make-sm-column-offset(3);
-  //}
 
   &:hover, &.open {
     .tile-pad {

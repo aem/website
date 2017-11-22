@@ -30,3 +30,8 @@ export const lineHeight = 1.4;
 // SPACING AND SIZES //
 ///////////////////////
 export const pageWidth = '1060px';
+
+////////////////////////
+// ANIMATIONS //
+////////////////
+export const transitionAllMed = 'all 0.2s ease-in-out';
