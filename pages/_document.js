@@ -14,7 +14,10 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang="en">
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          {this.props.styleTags}
+          <link rel="manifest" href="static/manifest.json" />
+        </Head>
         <body>
           <Main />
           <NextScript />
