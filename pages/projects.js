@@ -12,11 +12,7 @@ import KeyboundComponent from '../components/projects/KeyboundComponent';
 import ProjectNames from '../components/projects/ProjectNames';
 import getProjectSlug from '../utils/getProjectSlug';
 
-const ProjectListingWrapper = styled.article`
-  display: flex;
-  height: 100%;
-  position: relative;
-`;
+const ProjectListingWrapper = styled.article`display: flex;`;
 
 const Project = Record({ name: '', languages: '', tech: '', component: null });
 

@@ -30,10 +30,8 @@ const DocsSoap = () => {
         gracefully handle the scenario when content was pasted into it from
         third-party sources such as Microsoft Word and Google Docs. Enter{' '}
         <code>docs-soap</code>, the open-source version of the parser I wrote to
-        handle the case where content was pasted in from Google Docs. Check out
-        a quick demo of the product below.
+        handle the case where content was pasted in from Google Docs.
       </p>
-      {/* <DocsSoapDemo /> */}
     </div>
   );
 };
