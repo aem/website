@@ -39,6 +39,7 @@ const Layout = ({ children, title = 'Adam Markon' }) => {
             src="//js.hs-scripts.com/1932554.js"
           />
         )}
+        <link rel="manifest" href="static/manifest.json" />
       </Head>
       <Wrapper>
         <Header />
