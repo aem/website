@@ -82,7 +82,7 @@ export default class Projects extends React.Component {
       proj => getProjectSlug(proj) === this.state.selected
     ).component || <h1>hi!</h1>;
     return (
-      <Layout>
+      <Layout title="Projects | Adam Markon">
         <ProjectListingWrapper>
           <ProjectNames
             projects={projects}

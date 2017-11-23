@@ -31,7 +31,7 @@ const bodies = {
 export default class Home extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout title="Adam Markon">
         <TileWrapper>
           <Tile title="👋 I'm Adam!" body={bodies.aboutMe} />
           <Tile title="Software Development" body={bodies.developer} />
