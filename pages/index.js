@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import React from 'react';
-import { Pre } from 'lib';
+import { Pre, H2 as H1 } from 'lib';
 import styled from 'styled-components';
 import Tile from '../components/home/Tile';
 
@@ -32,12 +32,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout title="Adam Markon">
-        <TileWrapper>
+        <H1>This site is under construction. Check back soon!</H1>
+        {/* <TileWrapper>
           <Tile title="👋 I'm Adam!" body={bodies.aboutMe} />
           <Tile title="Software Development" body={bodies.developer} />
           <Tile title="Video Production" body={bodies.video} />
           <Tile title="Biking" body={bodies.biking} />
-        </TileWrapper>
+        </TileWrapper> */}
       </Layout>
     );
   }

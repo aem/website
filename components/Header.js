@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <H2>Adam Markon</H2>
-      <Naivgation />
+      {/* <Naivgation /> */}
     </StyledHeader>
   );
 };
